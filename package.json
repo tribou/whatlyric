@@ -1,0 +1,50 @@
+{
+  "name": "whatlyric",
+  "version": "1.0.0",
+  "description": "Find the lyrics for the songs you love",
+  "main": "api/server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tribou/whatlyric.git"
+  },
+  "scripts": {
+    "build": "webpack -p --progress --config build/webpack.config.js",
+    "dev": "webpack --progress --colors --watch --config build/webpack.config.js & npm start",
+    "lint": "eslint --ignore-pattern **/bundle-*.js --ext .js,.jsx web/** api/**",
+    "start": "node api/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tribou",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.8.29",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.21.0",
+    "eslint": "^1.7.3",
+    "eslint-config-airbnb": "^0.1.0",
+    "eslint-loader": "^1.1.0",
+    "eslint-plugin-react": "^3.6.3",
+    "jest-cli": "^0.6.1",
+    "node-sass": "^3.4.1",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "babel": "^5.8.29",
+    "boom": "^2.10.0",
+    "flux": "^2.1.1",
+    "good": "^6.4.0",
+    "good-console": "^5.1.0",
+    "hapi": "^11.0.2",
+    "hapi-react-views": "^4.0.0",
+    "hapi-swagger": "^2.2.1",
+    "inert": "^3.2.0",
+    "joi": "^6.9.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "superagent": "^1.4.0",
+    "vision": "^3.0.0"
+  }
+}

@@ -1,0 +1,116 @@
+
+.main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  
+  text-align: center;
+}
+
+.main > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: #333537;
+  border-bottom: 1px solid #979797;
+  padding: 45px;
+  font-size: 11px;
+  color: #26B091;
+  letter-spacing: 2.35px;
+  line-height: 27px;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.content {
+  text-align: left;
+  max-width: 730px;
+  padding: 30px;
+}
+
+.search {
+  font-family: CourierNewPSMT;
+  font-weight: 300;
+
+  input {
+    background: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.25);
+    color: #333537;
+    font-size: 22px;
+    line-height: 25px;
+    outline: none;
+    padding: 29px;
+    width: 100%;
+  }
+
+  ul {
+    background: #FFFFFF;
+    border: 1px solid #E7E9EB;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
+    font-size: 16px;
+    line-height: 46px;
+    list-style-type: none;
+    margin-top: 5px;
+    padding: 0 10px 0 10px;
+    width: 100%; 
+  
+    li {
+      border-bottom: 1px solid #E7E9EB;
+      padding: 2px 3px 0 3px;
+
+      &:hover {
+        background: #26B08F;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-weight: 500;
+        margin: 0 -10px 0 -10px;
+        padding: 1px 10px 1px 11px;
+      }
+    }
+  }
+
+  .lyrics {
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .search-again {
+    background: #26B08F;
+    border-radius: 4px;
+    color: #FFFFFF;
+    margin-top: -59px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .sidebar { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .content       { flex: 3 0px; }
+  .sidebar-left  { order: 1; } 
+  .content       { order: 2; }
+  .sidebar-right { order: 3; }
+  .footer        { order: 4; }
+}
+
+body {
+  background: #EFF1F4;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+}
+

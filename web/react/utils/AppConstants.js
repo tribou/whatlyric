@@ -1,0 +1,13 @@
+// Async return actions begin with RECEIVE_
+export const Actions = {
+  SELECT_RESULT: 'SELECT_RESULT',
+  SELECT_SEARCH_AGAIN: 'SELECT_SEARCH_AGAIN',
+  RECEIVE_SEARCH_QUERY: 'RECEIVE_SEARCH_QUERY',
+  SEARCH_QUERY: 'SEARCH_QUERY',
+};
+
+export const ViewFilters = {
+  SEARCHING: 'SEARCHING',
+  RESULTS: 'RESULTS',
+};
+
