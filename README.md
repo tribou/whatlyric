@@ -1,8 +1,9 @@
 # WHATLYRIC
+[![Build Status](https://travis-ci.org/tribou/whatlyric.svg?branch=master)](https://travis-ci.org/tribou/whatlyric)
 
 Find the lyrics for the songs you love.
 
-WHATLYRIC is a song and artist search built in React and Flux running on Node.js.
+WHATLYRIC is an example song and artist search built in React, Flux, and Hapi.  It also features tests written with [lab](https://github.com/hapijs/lab) and [sinon](https://github.com/sinonjs/sinon) instead of the usual [Jest](https://github.com/facebook/jest).
 
 #### Quick Start
 
@@ -27,4 +28,22 @@ npm start
 The app defaults to http://localhost:8000.
 
 API documentation is generated at http://localhost:8000/documentation.
+
+#### Testing
+
+```bash
+# Run default tests
+npm test
+
+# Generate a test coverage report
+# Since babel transpiles before tests are run, the line numbers
+# reflect the code in this test coverage report
+npm run test-cov-html
+
+# Auto-restart tests upon code changes
+npm run watch-test
+
+# Auto-restart tests and coverage report upon code changes
+npm run watch-test-cov
+```
 

@@ -1,6 +1,6 @@
 {
   "name": "whatlyric",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find the lyrics for the songs you love",
   "main": "api/server.js",
   "repository": {
@@ -9,25 +9,33 @@
   },
   "scripts": {
     "build": "webpack -p --progress --config build/webpack.config.js",
+    "debug": "node debug api/server.js",
     "dev": "webpack --progress --colors --watch --config build/webpack.config.js & npm start",
     "lint": "eslint --ignore-pattern **/bundle-*.js --ext .js,.jsx web/** api/**",
     "start": "node api/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lab -v -P '_test' -T node_modules/lab-babel -t 96 api web",
+    "test-cov-html": "npm test -- -r html -o coverage.html -r console -o stdout",
+    "watch": "nodemon -w web/ -w api/ -e js,jsx",
+    "watch-test": "npm run watch -- -x npm test",
+    "watch-test-cov": "npm run watch -- -x npm run test-cov-html"
   },
   "author": "tribou",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^5.8.29",
+    "babel-core": "^5.8.33",
     "babel-eslint": "^4.1.3",
-    "babel-loader": "^5.3.2",
+    "babel-loader": "^5.3.3",
+    "code": "^1.5.0",
     "css-loader": "^0.21.0",
     "eslint": "^1.7.3",
     "eslint-config-airbnb": "^0.1.0",
     "eslint-loader": "^1.1.0",
     "eslint-plugin-react": "^3.6.3",
-    "jest-cli": "^0.6.1",
+    "lab": "^7.0.0",
+    "lab-babel": "^1.1.0",
     "node-sass": "^3.4.1",
     "sass-loader": "^3.1.1",
+    "sinon": "^1.17.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2"
   },
