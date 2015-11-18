@@ -3,6 +3,8 @@
 
 Find the lyrics for the songs you love.
 
+<img src="https://raw.githubusercontent.com/wiki/tribou/whatlyric/whatlyric.gif" alt="WhatLyric" style="width: 200px" />
+
 WHATLYRIC is an example song and artist search built in React, Flux, and Hapi.  It also features tests written with [lab](https://github.com/hapijs/lab) and [sinon](https://github.com/sinonjs/sinon) instead of the usual [Jest](https://github.com/facebook/jest).
 
 #### Quick Start
