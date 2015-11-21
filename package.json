@@ -13,7 +13,7 @@
     "dev": "webpack --progress --colors --watch --config build/webpack.config.js & npm start",
     "lint": "eslint --ignore-pattern **/bundle-*.js --ext .js,.jsx web/** api/**",
     "start": "node api/server.js",
-    "test": "lab -v -P '_test' -T node_modules/lab-babel -t 96 api web",
+    "test": "lab -v -P '_test' -T node_modules/lab-babel -t 97 api web",
     "test-cov-html": "npm test -- -r html -o coverage.html -r console -o stdout",
     "watch": "nodemon -w web/ -w api/ -e js,jsx",
     "watch-test": "npm run watch -- -x npm test",

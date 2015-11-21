@@ -15,7 +15,7 @@ const getServerConnection = require('./config/env.js').getServerConnection;
 server.connection(getServerConnection());
 
 // Register plugins
-server.register(plugins, (err) => {
+server.register(plugins, err => {
   if (err) {
     console.error(err);
   }

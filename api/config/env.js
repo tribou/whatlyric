@@ -10,7 +10,7 @@ const Variables = {
   },
 };
 
-Joi.validate(Variables.values, Variables.schemas, (err) => {
+Joi.validate(Variables.values, Variables.schemas, err => {
   if (err) {
     console.error(err);
   }

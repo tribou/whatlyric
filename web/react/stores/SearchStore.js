@@ -35,7 +35,7 @@ class SearchStoreClass extends EventEmitter {
 
 const SearchStore = new SearchStoreClass();
 
-AppDispatcher.register((payload) => {
+AppDispatcher.register(payload => {
   switch (payload.action.type) {
 
   case Actions.RECEIVE_SEARCH_QUERY:
