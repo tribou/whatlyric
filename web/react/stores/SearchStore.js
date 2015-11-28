@@ -6,7 +6,7 @@ const CHANGE_EVENT = 'change';
 
 // Could be replaced with ImmutableJS or Immutability helpers:
 // https://facebook.github.io/react/docs/update.html
-let _store = {
+let _store = { // eslint-disable-line prefer-const
   searchResults: [],
   view: {
     filter: ViewFilters.SEARCHING,

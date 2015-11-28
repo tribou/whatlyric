@@ -15,7 +15,7 @@ describe('WhatLyric API', () => {
   let Request;
   let ServerActions;
   let searchByArtistOrTitle;
-  let stubRequest;
+  let stubRequest; // eslint-disable-line no-unused-vars
   let stubServerActions;
 
   const response = {

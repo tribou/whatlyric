@@ -17,13 +17,10 @@ const data = require('../services/lyricsnmusic_fixtures.js').data;
 describe('Search Controller API', () => {
   let Hapi;
   let Request;
-  let LyricsMusicAPI;
-  let SearchController;
-  let searchByArtistOrTitle;
+  let SearchController; // eslint-disable-line no-unused-vars
   let routes;
   let server;
-  let spy;
-  let stub;
+  let stubRequest; // eslint-disable-line no-unused-vars
 
   const response = {
     body: data,
@@ -32,7 +29,7 @@ describe('Search Controller API', () => {
   before(done => {
     // stub the superagent response
     Request = require('superagent');
-    stub = Sinon.stub(Request.Request.prototype, 'end', callback => {
+    stubRequest = Sinon.stub(Request.Request.prototype, 'end', callback => {
       return callback(null, response);
     });
     // create the test Hapi server
@@ -74,7 +71,6 @@ describe('Search Controller API', () => {
   after(done => {
     // restore all sinon objects
     Request.Request.prototype.end.restore();
-    //LyricsMusicAPI.searchArtistOrTitle.restore();
     done();
   });
 });
