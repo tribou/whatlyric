@@ -52,7 +52,7 @@
     "joi": "^6.9.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "superagent": "^1.4.0",
+    "superagent": "git+https://git@github.com/visionmedia/superagent.git",
     "vision": "^3.0.0"
   }
 }

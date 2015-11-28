@@ -37,12 +37,12 @@ describe('WhatLyric API', () => {
     done();
   });
 
-  it('searchByArtistOrTitle calls the server action with the response body data', { skip: true }, done => {
+  it('searchByArtistOrTitle calls the server action with the response body data', done => {
     searchByArtistOrTitle();
     expect(stubServerActions.getCall(0).args[0]).to.equal(response.body.data);
     done();
   });
-  
+
   after(done => {
     // restore all sinon objects
     Request.Request.prototype.end.restore();
