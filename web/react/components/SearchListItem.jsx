@@ -1,5 +1,4 @@
 import React from 'react';
-import { selectResult } from '../actions/SearchActions.js';
 
 export default class SearchList extends React.Component {
 
@@ -9,7 +8,7 @@ export default class SearchList extends React.Component {
   }
 
   _onClick() {
-    selectResult(this.props.index);
+    this.props.handleClick(this.props.index);
   }
 
   render() {
@@ -24,6 +23,7 @@ export default class SearchList extends React.Component {
 }
 
 SearchList.propTypes = {
+  handleClick: React.PropTypes.func,
   index: React.PropTypes.number,
   text: React.PropTypes.string,
 };

@@ -1,7 +1,11 @@
 import React from 'react';
 import SearchStore from '../stores/SearchStore.js';
 import { ViewFilters } from '../utils/AppConstants.js';
-import { searchByArtistOrTitle, searchAgain } from '../actions/SearchActions.js';
+import {
+  searchByArtistOrTitle,
+  searchAgain,
+  selectResult,
+} from '../actions/SearchActions.js';
 import ResultPanel from './ResultPanel.jsx';
 import SearchListItem from './SearchListItem.jsx';
 
@@ -106,6 +110,7 @@ export default class SearchPanel extends React.Component {
 
           <SearchListItem
             key={index}
+            handleClick={selectResult}
             index={index}
             text={text}
           />

@@ -14,7 +14,7 @@ const before = lab.before;
 // Fixture data
 const data = require('../services/lyricsnmusic_fixtures.js').data;
 
-describe('Search Controller API', () => {
+describe('Search Controller', () => {
   let Hapi;
   let Request;
   let SearchController; // eslint-disable-line no-unused-vars
